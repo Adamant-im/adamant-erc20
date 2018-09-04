@@ -13,7 +13,7 @@ branches:
 script: node ./build.js
 
 after_success:
-  - ./push_list.sh
+  - source ./push_list.sh
 
 env:
   global:
