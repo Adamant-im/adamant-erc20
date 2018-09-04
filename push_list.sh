@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+echo "Push that build"
 
 # Checkout autobuild branch
 cd ..
