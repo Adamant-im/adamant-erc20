@@ -2,10 +2,8 @@
 
 # Checkout autobuild branch
 cd ..
-ls
 git clone https://github.com/Adamant-im/adamant-erc20.git --verbose --branch autobuild --single-branch repo_autobuild
 cd repo_autobuild
-ls
 
 mv ../adamant-erc20/.dist/erc20_tokens.json ./build
 
