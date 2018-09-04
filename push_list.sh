@@ -1,12 +1,11 @@
 #!/bin/bash
 
-echo "Push that build"
-
 # Checkout autobuild branch
 cd ..
-git clone https://github.com/Adamant-im/adamant-erc20.git --branch autobuild --single-branch repo_autobuild
+ls
+git clone https://github.com/Adamant-im/adamant-erc20.git --verbose --branch autobuild --single-branch repo_autobuild
 cd repo_autobuild
-ls -la
+ls
 
 mv ../adamant-erc20/.dist/erc20_tokens.json ./build
 
@@ -18,4 +17,4 @@ git add ./build/erc20_tokens.json
 # We don’t want to run a build for a this commit in order to avoid circular builds: 
 # add [ci skip] to the git commit message
 git commit --message "Snapshot autobuild N.$TRAVIS_BUILD_NUMBER [ci skip]"
-git push origin-master -v
+git push -v
