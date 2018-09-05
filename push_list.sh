@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ev
+
 # Checkout autobuild branch
 cd ..
 git clone https://github.com/Adamant-im/adamant-erc20.git --verbose --branch autobuild --single-branch repo_autobuild
