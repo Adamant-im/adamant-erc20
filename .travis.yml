@@ -10,9 +10,8 @@ branches:
   only:
   - master
 
-script: node ./build.js
-
-after_success:
+script: 
+  - node ./build.js
   - source ./push_list.sh
 
 env:
